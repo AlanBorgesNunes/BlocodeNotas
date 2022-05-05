@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_cardView"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    android:clickable="true"
+    android:background="#F2F3DE"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_wraper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F3DE"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bg" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:fontFamily="@font/bolde"
+            android:padding="5dp"
+            android:text="Titulo"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/regular"
+            android:text="descrição dessa porra toda véi"
+            android:textColor="@color/black"
+
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3DE"
+    tools:context=".CriarNota">
+
+    <include
+        layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/anotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="#F2F3DE"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Insira sua descrição"
+        android:padding="10dp"
+        android:textColorHint="#A5A19F"
+        app:flow_maxElementsWrap="20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_anotation"
+        app:layout_constraintVertical_bias="0.056"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_forgot_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:background="#F2F3DE"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anotation"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="0dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@+id/btnSalvarAnotacao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_button_migrate_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bolde"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="Salvar"
+                    android:textColor="#F2F3DE"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/title_anotation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="88dp"
+        android:background="#F2F3DE"
+        android:ems="10"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Titulo"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="#A5A19F"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

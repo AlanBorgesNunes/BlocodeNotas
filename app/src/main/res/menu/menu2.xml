@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="setings"
+        android:icon="@drawable/ic_baseline_menu_open_24"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:id="@+id/anotaca_privada"
+                android:title="Anotações privadas"
+                android:icon="@drawable/ic_icon_notesprivate"
+                />
+
+            <item
+                android:id="@+id/sair"
+                android:title="Sair"
+                android:icon="@drawable/ic_icon_logout"
+                />
+
+
+
+        </menu>
+
+
+    </item>
+</menu>

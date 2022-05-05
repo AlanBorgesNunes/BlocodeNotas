@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.app.blocodenotas"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    viewBinding{
+        enabled = true
+
+    }
+    buildFeatures {
+        dataBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.7.0-alpha01'
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+
+
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation "androidx.biometric:biometric-ktx:1.2.0-alpha04"
+
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
