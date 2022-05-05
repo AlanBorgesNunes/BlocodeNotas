@@ -45,10 +45,6 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity()  {
 
-    private var titlesList = mutableListOf<String>()
-    private var descriptionList = mutableListOf<String>()
-
-    lateinit var preferences: SharedPreferences
 
     private lateinit var binding: ActivityMainBinding
 
@@ -57,9 +53,6 @@ class MainActivity : AppCompatActivity()  {
     private lateinit var dbRef: DatabaseReference
 
     private lateinit var rv : RecyclerView
-     var title : String? = null
-
-
 
     private lateinit var userArrayList : ArrayList<Anotation>
 
@@ -118,6 +111,11 @@ class MainActivity : AppCompatActivity()  {
 
                          rv.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
 
+
+                         dbRef.database.getReference(token).removeValue()
+
+
+
                      }
 
              }
@@ -130,7 +128,7 @@ class MainActivity : AppCompatActivity()  {
 
      }
 
-    
+
 
 
     private fun getAnotationData(idAnotation: String) {
